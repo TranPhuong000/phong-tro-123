@@ -8,14 +8,18 @@ module.exports = {
   theme: {
     extend: {
       width:{
-        '1500': '1500px'
+        'full': 'full'
       },
       backgroundColor: {
         primary: '#ffffff',
         secondary1: '#0045a8',
         secondary2: '#f30202',
         secondary3: '#41af53',
+      },
+      maxWidth:{
+        '500': '500px'
       }
+
     },
   },
   plugins: [],

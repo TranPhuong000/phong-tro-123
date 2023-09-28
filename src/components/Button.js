@@ -1,20 +1,27 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-const Button = ( {text, textColor, bgColor, textTransform, cursor, gradientColorStops, fontWeight, fontSize} ) => {
+
+const Button = ( {text, textColor, bgColor, textTransform, cursor, gradientColorStops, fontWeight, fontSize, onClick, Width} ) => {
+    console.log('re-render')
     return (
         <button 
             type='button'
             className={`py-2 px-4 
             ${textColor} 
-            ${bgColor} outline-none rounded-md 
+            ${bgColor} outline-none rounded-lg justify-center gap-1
             ${textTransform} 
             ${cursor} 
             ${gradientColorStops} 
             ${fontWeight} 
-            ${fontSize}`}>
-            {text}
+            ${fontSize}
+            ${Width}`} 
+            onClick={onClick}
+           >
+
+            <span>{text}</span> 
+
         </button>
     )
 }
 
-export default Button
+export default memo(Button)
