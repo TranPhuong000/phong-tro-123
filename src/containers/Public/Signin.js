@@ -1,23 +1,29 @@
 import React from "react";
-import { InputForm, Button } from "../../components";
+import { InputForm, Button} from "../../components";
 import { InputFormPass } from '../../components'
-import GG from '../../assets/604199df880fb029291ddd7c382e828b-removebg-preview.png'
-import FB from '../../assets/660bcb3e9408cfa1747d2d6e4c8c4526-removebg-preview.png'
+
 
 
 const Signin = () => {
     return (
-        <div className=' mw-[500] p-[60px] pl-[100px] pb-[100px]'> 
+        <div className=' mw-[500] pl-[100px] pb-[100px]'> 
             <h3 className='font-semibold text-3xl mb-3 uppercase pl-[190px]'>Đăng ký</h3>
             <div className='w=full flex flex-col gap-3' >
                     <InputForm label={'Tài khoản / Email'}></InputForm>
                     <InputFormPass label={'Mật khẩu'}></InputFormPass>
                     <InputFormPass label={'Nhập lại mật khẩu'}></InputFormPass>
-                    <InputFormPass label={'Tên đầy đủ'}></InputFormPass>
+                    <InputForm label={'Tên đầy đủ'}></InputForm>
+                    <label className='text-base uppercase font-semibold text-stone-400 pl-1'>Loại Tài Khoản</label>
+                    <form className="uppercase text-xl p-2 justify-center">
+                        <input checked="checked" name="gender" type="radio" value="Nam" className="m-6" />Tìm kiếm
+                        <input name="gender" type="radio" value="Nữ" className="m-6"/>Chính chủ
+                        <input name="gender" type="radio" value="Khác" className="m-6"/>Môi giới
+                    </form>
+
                     
-                    <div>
-                        <h6 className="text-center">Bằng cách nhấp vào Đăng ký, bạn đồng ý với bạn đã đồng ý với</h6>
-                        <h6 className="text-center hover:text-[blue] text-blue-600">Điều khoản sử dụng</h6>
+                    <div className="text-center">
+                        <h6 className="">Bằng cách nhấp vào Đăng ký, bạn đồng ý với bạn đã đồng ý với</h6>
+                        <a href="#" className="hover:text-[blue] hover:underline text-blue-600 cursor-pointer display: inline-block">Điều khoản sử dụng</a>
                     </div>  
                     <Button 
                             text={'Đăng ký'} 
